@@ -1,7 +1,16 @@
 import Services from "../Libs/Services";
 import AdvocateCard from "../Libs/AdvocateCard";
+import QuestionCard from "../Libs/QuestionCard";
+import { useState } from "react";
 
 const Home = () => {
+    const [accordionOpen, setAccordionOpen] = useState(0);
+
+    const handleButton = (i) => {
+        if (accordionOpen === i) return;
+        setAccordionOpen(i);
+    };
+
     const advocates = [
         {
             name: "Emily Smith",
@@ -25,6 +34,35 @@ const Home = () => {
         },
     ];
 
+    const accordionItems = [
+        {
+            question: "What types of property issues can be consulted?",
+            answer: "We provide consultation for various property issues, including land boundary disputes, problematic property sales and purchases, handling property certificates (SHM/HGB), property inheritance issues, and matters related to building permits.",
+        },
+        {
+            question: "How is the property law consultation process conducted?",
+            answer: "The process begins with scheduling an appointment. Consultations can be done online (video call or chat) or in-person. You will be asked to explain your case in detail, and our team of advocates will provide legal analysis and recommendations for the next steps.",
+        },
+        {
+            question: "What is the fee for a single consultation session?",
+            answer: "The consultation fee varies depending on the complexity of the case and the chosen session duration. Detailed information regarding the tariffs will be provided after you fill out the initial consultation request form.",
+        },
+        {
+            question:
+                "Is the data and information I provide guaranteed to be confidential?",
+            answer: "Yes, we fully guarantee the confidentiality of all client data and information. This confidentiality is an integral part of the professional code of ethics for advocates and is guaranteed by law.",
+        },
+        {
+            question:
+                "Does this service also include legal representation in court?",
+            answer: "The consultation service is the initial stage. If your case requires litigation (court) or non-litigation (negotiation) assistance, we can offer full representation services under a separate agreement and fee structure.",
+        },
+        {
+            question:
+                "What should I prepare before the consultation session begins?",
+            answer: "It is best to prepare relevant documents such as copies of land certificates, Sale and Purchase Agreements (AJB), Preliminary Sale and Purchase Agreements (PPJB), inheritance documents, or any other evidence related to your property issue. Also, put together a brief chronology of events.",
+        },
+    ];
     return (
         <>
             <section className="pt-24 pb-20 md:py-48 ">
@@ -165,6 +203,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
             <section className="py-24">
                 <div className="container">
                     <div className="w-full">
@@ -181,89 +220,89 @@ const Home = () => {
                         <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
                                 <label
-                                    for="first_name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="first_name"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     First Name
                                 </label>
                                 <input
                                     type="text"
                                     id="first_name"
-                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                                     placeholder="Jhon"
                                     required
                                 />
                             </div>
                             <div>
                                 <label
-                                    for="last_name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="last_name"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Last Name
                                 </label>
                                 <input
                                     type="text"
                                     id="last_name"
-                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                                     placeholder="Doe"
                                     required
                                 />
                             </div>
                             <div>
                                 <label
-                                    for="email"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="email"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Email
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
-                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                                     placeholder="test@example.com"
                                     required
                                 />
                             </div>
                             <div>
                                 <label
-                                    for="phone"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="phone"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Phone Number
                                 </label>
                                 <input
                                     type="tel"
                                     id="phone"
-                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                                     placeholder="08123-4567-8990"
                                     required
                                 />
                             </div>
                             <div>
                                 <label
-                                    for="case_type"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="case_type"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Case Type
                                 </label>
                                 <input
                                     type="text"
                                     id="case_type"
-                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
                                     placeholder="e.g Property Purchacing"
                                     required
                                 />
                             </div>
                             <div>
                                 <label
-                                    for="urgency_level"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="urgency_level"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Urgency Level
                                 </label>
                                 <select
                                     id="countries"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 "
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 "
                                 >
                                     <option>Low</option>
                                     <option>Normal</option>
@@ -273,48 +312,48 @@ const Home = () => {
                             </div>
                             <div className="col-span-2">
                                 <label
-                                    for="urgency_level"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="urgency_level"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Property Location
                                 </label>
                                 <textarea
                                     id="message"
                                     rows="2"
-                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
+                                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
                                     placeholder="123 Main Street, Anytown, USA"
                                 ></textarea>
                             </div>
                             <div className="col-span-2">
                                 <label
-                                    for="urgency_level"
-                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                    htmlFor="urgency_level"
+                                    className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Case Details
                                 </label>
                                 <textarea
                                     id="message"
                                     rows="6"
-                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
+                                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
                                     placeholder="Explai more about your case."
                                 ></textarea>
                             </div>
                             <div>
-                                <div class="flex items-center mb-4">
+                                <div className="flex items-center mb-4">
                                     <input
                                         id="checkbox-1"
                                         type="checkbox"
                                         value=""
-                                        class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary "
+                                        className="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary "
                                     />
                                     <label
-                                        for="checkbox-1"
-                                        class="ms-2 text-sm font-medium text-gray-900"
+                                        htmlFor="checkbox-1"
+                                        className="ms-2 text-sm font-medium text-gray-900"
                                     >
                                         I agree to the{" "}
                                         <a
                                             href="#"
-                                            class="text-primary hover:underline"
+                                            className="text-primary hover:underline"
                                         >
                                             terms and conditions
                                         </a>
@@ -323,11 +362,44 @@ const Home = () => {
                                 </div>
                                 <button
                                     type="submit"
-                                    class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    className="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                 >
                                     Register new account
                                 </button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="py-24">
+                <div className="container">
+                    <div className="w-full">
+                        <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
+                            Frequently{" "}
+                            <span className="font-black italic text-primary text-3xl md:text-4xl font-play-fair">
+                                Asked
+                            </span>{" "}
+                            Question.
+                        </h1>
+                    </div>
+                    <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                        <div className="mb-10 md:mb-0">
+                            <img
+                                src="/Assets/Faq.jpg"
+                                alt=""
+                                className="w-full rounded-md"
+                            />
+                        </div>
+                        <div className="space-y-4 w-full">
+                            {accordionItems.map((data, index) => (
+                                <QuestionCard
+                                    data={data}
+                                    isOpen={accordionOpen === index}
+                                    setIsOpen={handleButton}
+                                    index={index}
+                                    key={index}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
