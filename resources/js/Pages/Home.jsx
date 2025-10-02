@@ -1,4 +1,6 @@
 import React from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import Services from "../Libs/Services";
 
 const Home = () => {
     return (
@@ -51,7 +53,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <div className="py-24">
+            <section className="py-24">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-sm">
@@ -95,7 +97,30 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section className="py-20">
+                <div className="container">
+                    <div className="w-full">
+                        <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-sm">
+                            Identify{" "}
+                            <span className="font-black italic text-primary text-3xl md:text-4xl font-play-fair">
+                                hidden risks
+                            </span>{" "}
+                            immediately.
+                        </h1>
+                    </div>
+                    <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                        <div className="mb-10 md:mb-0">
+                            <img
+                                src="/Assets/Solution-image.png"
+                                alt=""
+                                className="w-full rounded-md"
+                            />
+                        </div>
+                        <Services />
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
