@@ -1,8 +1,30 @@
-import React from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
 import Services from "../Libs/Services";
+import AdvocateCard from "../Libs/AdvocateCard";
 
 const Home = () => {
+    const advocates = [
+        {
+            name: "Emily Smith",
+            bio: "Emily is a dedicated property advocate known for her meticulous approach to legal challenges. With a background in environmental law, she brings a unique perspective to property disputes.",
+            imageUrl: "/Assets/Advocate_1.png",
+        },
+        {
+            name: "Jhon Doe",
+            bio: "John is a seasoned property advocate with over 15 years of experience in navigating complex land disputes and transactions. His expertise lies in risk assessment and legal strategy formulation.",
+            imageUrl: "/Assets/Advocate_2.png",
+        },
+        {
+            name: "Michael Johnson",
+            bio: "Michael has a wealth of experience in property law, specializing in commercial real estate. His strategic insights have helped numerous clients achieve favorable outcomes.",
+            imageUrl: "/Assets/Advocate_3.png",
+        },
+        {
+            name: "Erina Wood",
+            bio: "Erina is a rising star in property law, known for her innovative approach to legal challenges. She is passionate about advocating for her clients' rights and finding creative solutions to complex issues.",
+            imageUrl: "/Assets/Advocate_4.png",
+        },
+    ];
+
     return (
         <>
             <section className="pt-24 pb-20 md:py-48 ">
@@ -118,6 +140,28 @@ const Home = () => {
                             />
                         </div>
                         <Services />
+                    </div>
+                </div>
+            </section>
+            <section className="py-24">
+                <div className="container">
+                    <div className="w-full">
+                        <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
+                            Meet Your{" "}
+                            <span className="font-black italic text-primary text-3xl md:text-4xl font-play-fair">
+                                Lead Advocates
+                            </span>
+                        </h1>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {advocates.map((data) => (
+                                <AdvocateCard
+                                    key={data.name}
+                                    name={data.name}
+                                    bio={data.bio}
+                                    imageUrl={data.imageUrl}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
