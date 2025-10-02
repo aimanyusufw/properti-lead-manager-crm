@@ -165,6 +165,173 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className="py-24">
+                <div className="container">
+                    <div className="w-full">
+                        <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
+                            Tell Us About{" "}
+                            <span className="font-black italic text-primary text-3xl md:text-4xl font-play-fair">
+                                Your Case.
+                            </span>
+                            Get Matched{" "}
+                            <span className="font-black italic text-primary text-3xl md:text-4xl font-play-fair">
+                                with an Expert.
+                            </span>
+                        </h1>
+                        <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label
+                                    for="first_name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    First Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="first_name"
+                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    placeholder="Jhon"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="last_name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Last Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="last_name"
+                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    placeholder="Doe"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    placeholder="test@example.com"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="phone"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    placeholder="08123-4567-8990"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="case_type"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Case Type
+                                </label>
+                                <input
+                                    type="text"
+                                    id="case_type"
+                                    class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5"
+                                    placeholder="e.g Property Purchacing"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="urgency_level"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Urgency Level
+                                </label>
+                                <select
+                                    id="countries"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 "
+                                >
+                                    <option>Low</option>
+                                    <option>Normal</option>
+                                    <option>High</option>
+                                    <option>Critical</option>
+                                </select>
+                            </div>
+                            <div className="col-span-2">
+                                <label
+                                    for="urgency_level"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Property Location
+                                </label>
+                                <textarea
+                                    id="message"
+                                    rows="2"
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
+                                    placeholder="123 Main Street, Anytown, USA"
+                                ></textarea>
+                            </div>
+                            <div className="col-span-2">
+                                <label
+                                    for="urgency_level"
+                                    class="block mb-2 text-sm font-medium text-gray-900 "
+                                >
+                                    Case Details
+                                </label>
+                                <textarea
+                                    id="message"
+                                    rows="6"
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
+                                    placeholder="Explai more about your case."
+                                ></textarea>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-4">
+                                    <input
+                                        id="checkbox-1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary "
+                                    />
+                                    <label
+                                        for="checkbox-1"
+                                        class="ms-2 text-sm font-medium text-gray-900"
+                                    >
+                                        I agree to the{" "}
+                                        <a
+                                            href="#"
+                                            class="text-primary hover:underline"
+                                        >
+                                            terms and conditions
+                                        </a>
+                                        .
+                                    </label>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                >
+                                    Register new account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
