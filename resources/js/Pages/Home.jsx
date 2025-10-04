@@ -65,7 +65,7 @@ const Home = () => {
     ];
     return (
         <>
-            <section className="pt-24 pb-20 md:py-48 ">
+            <section className="pt-24 pb-20 md:py-48" id="home">
                 <div className="container w-full flex flex-wrap-reverse items-center">
                     <div className="w-full md:w-1/2">
                         <h1 className="font-semibold text-4xl md:text-5xl leading-snug mb-6">
@@ -158,7 +158,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-10 md:py-20">
+            <section className="py-10 md:py-20" id="our-solution">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-sm">
@@ -179,7 +179,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-10 md:py-20">
+            <section className="py-10 md:py-20" id="expert-profile">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
@@ -201,7 +201,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-10 md:py-20">
+            <section className="py-10 md:py-20" id="get-started">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
@@ -369,7 +369,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-10 md:py-20">
+            <section className="py-10 md:py-20" id="faq">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
