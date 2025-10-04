@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
     return (
         <footer className="bg-primary">
-            <div className="mx-auto w-full max-w-screen-xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:py-8 px-4 py-6 gap-5">
+            <div className="container">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:py-8 py-6 gap-5">
                     <h1 className="font-play-fair font-black text-3xl text-text text-white">
                         LEX PROPERTI
                     </h1>
