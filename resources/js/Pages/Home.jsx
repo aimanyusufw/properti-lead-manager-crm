@@ -102,7 +102,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section id="our-credibility" className="py-16 bg-slate-100">
+            <section id="our-credibility" className="py-10 bg-slate-100">
                 <div className="container">
                     <div className="grid grid-cols-2 md:grid-cols-5 place-items-center gap-20 md:gap-40 flex-wrap">
                         <img src="/Assets/Gic-logo.png" alt="" />
@@ -113,7 +113,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-24">
+            <section className="py-10 md:py-20">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-sm">
@@ -122,7 +122,7 @@ const Home = () => {
                                 Property Roadblocks?
                             </span>
                         </h1>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-14">
                             <div>
                                 <img
                                     src="/Assets/Rectangle 1.png"
@@ -158,7 +158,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-20">
+            <section className="py-10 md:py-20">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-sm">
@@ -170,18 +170,16 @@ const Home = () => {
                         </h1>
                     </div>
                     <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-                        <div className="mb-10 md:mb-0">
-                            <img
-                                src="/Assets/Solution-image.png"
-                                alt=""
-                                className="w-full rounded-md"
-                            />
-                        </div>
+                        <img
+                            src="/Assets/Solution-image.png"
+                            alt=""
+                            className="w-full rounded-md"
+                        />
                         <Services />
                     </div>
                 </div>
             </section>
-            <section className="py-24">
+            <section className="py-10 md:py-20">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
@@ -203,8 +201,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="py-24">
+            <section className="py-10 md:py-20">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
@@ -218,10 +215,10 @@ const Home = () => {
                             </span>
                         </h1>
                         <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <div>
+                            <div className="w-full">
                                 <label
                                     htmlFor="first_name"
-                                    className="block mb-2 text-sm font-medium text-gray-900 "
+                                    className="block mb-2 text-sm font-medium text-gray-900"
                                 >
                                     First Name
                                 </label>
@@ -310,35 +307,36 @@ const Home = () => {
                                     <option>Critical</option>
                                 </select>
                             </div>
-                            <div className="col-span-2">
+                            <div className="md:col-span-2">
                                 <label
-                                    htmlFor="urgency_level"
+                                    htmlFor="property_location"
                                     className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Property Location
                                 </label>
                                 <textarea
-                                    id="message"
+                                    id="property_location"
                                     rows="2"
                                     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
                                     placeholder="123 Main Street, Anytown, USA"
                                 ></textarea>
                             </div>
-                            <div className="col-span-2">
+
+                            <div className="md:col-span-2">
                                 <label
-                                    htmlFor="urgency_level"
+                                    htmlFor="case_details"
                                     className="block mb-2 text-sm font-medium text-gray-900 "
                                 >
                                     Case Details
                                 </label>
                                 <textarea
-                                    id="message"
+                                    id="case_details"
                                     rows="6"
                                     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary focus:border-primary"
-                                    placeholder="Explai more about your case."
+                                    placeholder="Explain more about your case."
                                 ></textarea>
                             </div>
-                            <div>
+                            <div className="md:col-span-2">
                                 <div className="flex items-center mb-4">
                                     <input
                                         id="checkbox-1"
@@ -362,7 +360,7 @@ const Home = () => {
                                 </div>
                                 <button
                                     type="submit"
-                                    className="text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                    className="text-white bg-primary hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                 >
                                     Register new account
                                 </button>
@@ -371,7 +369,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-24">
+            <section className="py-10 md:py-20">
                 <div className="container">
                     <div className="w-full">
                         <h1 className="font-semibold text-2xl md:text-3xl leading-snug mb-6 max-w-md">
@@ -383,13 +381,11 @@ const Home = () => {
                         </h1>
                     </div>
                     <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-                        <div className="mb-10 md:mb-0">
-                            <img
-                                src="/Assets/Faq.jpg"
-                                alt=""
-                                className="w-full rounded-md"
-                            />
-                        </div>
+                        <img
+                            src="/Assets/Faq.jpg"
+                            alt=""
+                            className="w-full rounded-md"
+                        />
                         <div className="space-y-4 w-full">
                             {accordionItems.map((data, index) => (
                                 <QuestionCard

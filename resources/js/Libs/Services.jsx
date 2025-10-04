@@ -30,13 +30,13 @@ const Services = () => {
                         onClick={() => setIsOpen(index)}
                         className="flex justify-between items-center cursor-pointer w-full"
                     >
-                        <div className="flex justify-center items-baseline">
+                        <div className="grid grid-cols-4 ">
                             <div className="flex justify-center items-center border rounded-full h-14 w-14 text-primary font-play-fair italic text-4xl font-bold mr-4">
                                 {index + 1}
                             </div>
                             <h1
                                 key={index}
-                                className="font-play-fair text-3xl font-black italic mb-4"
+                                className="font-play-fair  col-span-3 text-start text-lg md:text-3xl font-black italic mb-4"
                             >
                                 {data.title}
                             </h1>
@@ -52,7 +52,7 @@ const Services = () => {
                                 : "grid-rows-[0fr] opacity-0"
                         }`}
                     >
-                        <div className="overflow-hidden mt-5">
+                        <div className="overflow-hidden mt-2 md:mt-5">
                             <p className="text-xs md:text-sm lg:text-base text-text/80 leading-relaxed">
                                 {data.description}
                             </p>
