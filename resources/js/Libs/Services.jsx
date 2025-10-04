@@ -30,13 +30,13 @@ const Services = () => {
                         onClick={() => setIsOpen(index)}
                         className="flex justify-between items-center cursor-pointer w-full"
                     >
-                        <div className="grid grid-cols-4 ">
+                        <div className="w-full flex items-center">
                             <div className="flex justify-center items-center border rounded-full h-14 w-14 text-primary font-play-fair italic text-4xl font-bold mr-4">
                                 {index + 1}
                             </div>
                             <h1
                                 key={index}
-                                className="font-play-fair  col-span-3 text-start text-lg md:text-3xl font-black italic mb-4"
+                                className="font-play-fair text-start text-lg md:text-2xl font-black italic mb-4"
                             >
                                 {data.title}
                             </h1>
