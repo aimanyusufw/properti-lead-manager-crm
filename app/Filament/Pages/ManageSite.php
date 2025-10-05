@@ -43,7 +43,8 @@ class ManageSite extends SettingsPage
                             ->label('Site Subtitle')
                             ->placeholder("site_title - Welcome!")
                             ->helperText('Your Site subtitle for SEO')
-                            ->maxLength(255),
+                            ->maxLength(255)
+                            ->required(),
                         Textarea::make('site_description')
                             ->rows(5)
                             ->placeholder("Your site description!")

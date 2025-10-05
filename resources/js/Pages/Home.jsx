@@ -3,10 +3,29 @@ import { Link } from "react-scroll";
 import Advocates from "../Components/Sections/Advocates";
 import GetStarted from "../Components/Sections/GetStarted";
 import FAQs from "../Components/Sections/FAQs";
+import { Head } from "@inertiajs/react";
 
-const Home = () => {
+const Home = ({ title, subtitle, description }) => {
     return (
         <>
+            <Head>
+                <title>{`${title} - ${subtitle}`}</title>
+                <meta name="description" content={description} />
+                <meta
+                    name="keywords"
+                    content="Property, Legal, Consultation, Risk Analysis, Advocates"
+                />
+                <meta name="author" content="aimanyusuf.me" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:image" content="/Assets/og-image.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content="/Assets/og-image.png" />
+            </Head>
             <section className="pt-24 pb-20 md:py-48" id="home">
                 <div className="container w-full flex flex-wrap-reverse items-center">
                     <div className="w-full md:w-1/2">
