@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cases', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
-            $table->foreignId('advocate_id')->constrained('advocates')->onDelete('cascade');
+            $table->foreignId('advocate_id')->nullable()->constrained('advocates')->onDelete('cascade');
             $table->string('case_type');
             $table->text('property_location')->nullable();
             $table->string('urgency_level')->default('normal');

@@ -25,8 +25,7 @@ class ClientCaseForm
                     Select::make('advocate_id')
                         ->label("Advocate Name/ID")
                         ->relationship("advocate", "name")
-                        ->searchable()
-                        ->required(),
+                        ->searchable(),
                     TextInput::make('case_type')
                         ->placeholder('e.g., Property Dispute, Contract Review')
                         ->required(),
