@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Advocate extends Model
 {
     protected $fillable = [
+        'photo',
         'name',
         'email',
         'phone',

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Advocates\Schemas;
 
 use App\Models\Advocate;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -16,6 +17,15 @@ class AdvocateForm
         return $schema
             ->components([
                 Section::make()->schema([
+                    FileUpload::make("photo")
+                        ->image()
+                        ->placeholder("Upload advocate's photo")
+                        ->imageEditor()
+                        ->imageEditorAspectRatios(['3:4'])
+                        ->imageCropAspectRatio('3:4')
+                        ->disk('public')
+                        ->directory('advocates')
+                        ->columnSpanFull(),
                     TextInput::make('name')
                         ->placeholder('John Doe')
                         ->required(),
