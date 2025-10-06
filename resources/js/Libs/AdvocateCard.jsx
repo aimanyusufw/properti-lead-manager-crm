@@ -15,6 +15,8 @@ const AdvocateCard = ({ name, bio, imageUrl }) => {
                 className="w-full h-full object-cover transition-opacity duration-500"
             />
 
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
             <div
                 className={`absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500 ease-in-out text-white ${
                     isHovered ? "translate-y-0" : "translate-y-[90px]"
