@@ -8,7 +8,7 @@ const GetStarted = () => {
     return (
         <section className="py-10 md:py-20 relative" id="get-started">
             <div className="container">
-                {flash.message && (
+                {flash.success && (
                     <div
                         id="toast-success"
                         className={`${
@@ -29,7 +29,7 @@ const GetStarted = () => {
                             <span className="sr-only">Check icon</span>
                         </div>
                         <div className="ms-3 text-sm font-normal">
-                            {flash.message}
+                            {flash.success}
                         </div>
                         <button
                             type="button"
